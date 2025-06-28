@@ -1,0 +1,309 @@
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("./fonts/permanent-marker.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ruji's Handwriting";
+  src: url("./fonts/rujis-handwriting-v2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: rgb(0 0 0 / 100%); /* Sharpie black */
+  --background-color: rgb(255 255 255 / 100%); /* Paper white */
+  --shadow-color: rgb(0 0 0 / 20%); /* Paper shadow gray */
+  --highlight-color: rgb(255 255 0 / 100%); /* Stabilo Boss highlighter yellow */
+  --primary-font: "Permanent Marker", cursive;
+  --secondary-font: "Ruji's Handwriting", cursive;
+  --gap: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: rgb(255 255 255 / 100%); /* Chalk white */
+    --background-color: rgb(0 0 0 / 100%); /* Chalkboard black */
+    --shadow-color: rgb(255 255 255 / 20%); /* Light shadow */
+    --highlight-color: rgb(0 0 0 / 0%); /* No highlighter pen on chalkboard */
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px; /* 16px is the default for most browsers */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: var(--gap);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  font-family: var(--primary-font);
+  width: fit-content;
+}
+
+.description,
+.selection {
+  font-family: var(--secondary-font);
+}
+
+hr {
+  border: none;
+  height: 0.5rem;
+  background-image: var(--hr);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* Space between checkbox and label */
+  white-space: normal; /* Wrap label */
+  width: fit-content; /* Shrink to fit content */
+  padding: 0.2rem 0.4rem; /* Padding for highlight effect */
+  margin: 0.2rem;
+  position: relative;
+}
+
+.option:hover::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 1.25rem;
+  width: 98%;
+  height: 85%;
+  background-color: var(--highlight-color);
+  box-shadow: 0 0 0.2rem 0.2rem var(--highlight-color);
+  transform: skewX(-20deg);
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.selected-option {
+  padding: 0 0.5rem 0 0.25rem;
+}
+
+/* No red pen on chalkboard */
+@media (prefers-color-scheme: light) {
+  .selected-option:hover {
+    width: fit-content;
+    text-decoration: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="6"><path d="M0 3 Q 15 2 30 3 T 60 3 T 90 3 T 120 3 T 150 3 T 180 3 T 210 3 T 240 3 T 270 3 T 300 3 T 330 3 T 360 3 T 390 3 T 400 3" stroke="red" fill="transparent" stroke-width="2"/><path d="M0 5 Q 15 4 30 5 T 60 5 T 90 5 T 120 5 T 150 5 T 180 5 T 210 5 T 240 5 T 270 5 T 300 5 T 330 5 T 360 5 T 390 5 T 400 5" stroke="red" fill="transparent" stroke-width="2"/></svg>');
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: auto 0.4rem;
+  }
+}
+
+input[type="checkbox"] {
+  flex-shrink: 0; /* Prevent shrinking */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--shadow-color);
+  transition: transform 0.1s ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  left: 0.025rem;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  transform: skew(6deg, 6deg);
+}
+
+label {
+  cursor: pointer;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-image: var(--underline-a);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: auto 0.3rem;
+  cursor: pointer;
+}
+
+h2 a {
+  background-size: auto 0.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1 a {
+  background-size: auto 0.8rem;
+}
+
+legend {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border: 0.25rem solid var(--primary-color);
+  box-shadow: 4px 4px 0 var(--shadow-color);
+  border-radius: var(--border-radius, 15px 30px 15px 30px/30px 15px 30px 15px);
+  transform: skewX(var(--skew-x, 0deg)) skewY(var(--skew-y, 0deg));
+}
+
+legend:nth-of-type(4n + 2) {
+  --border-radius: 20px 25px 20px 25px/25px 20px 25px 20px;
+  --skew-x: -0.15deg;
+  --skew-y: -0.35deg;
+}
+
+legend:nth-of-type(4n + 3) {
+  --border-radius: 18px 22px 18px 22px/22px 18px 22px 18px;
+  --skew-x: 0.25deg;
+  --skew-y: 0.3deg;
+}
+
+legend:nth-of-type(4n + 4) {
+  --border-radius: 22px 20px 22px 20px/20px 22px 20px 22px;
+  --skew-x: -0.65deg;
+  --skew-y: -0.4deg;
+}
+
+fieldset {
+  border: 0.3rem solid var(--primary-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius, 200px 30px 200px 30px/30px 200px 30px 200px);
+  margin: 1.5rem 0.5rem;
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  transform: skew(var(--skew-x, 0.87deg), var(--skew-y, 0.79deg));
+  overflow: hidden;
+}
+
+fieldset:nth-of-type(4n + 2) {
+  --border-radius: 220px 30px 180px 45px/45px 180px 30px 220px;
+  --skew-x: -0.29deg;
+  --skew-y: -0.36deg;
+}
+
+fieldset:nth-of-type(4n + 3) {
+  --border-radius: 190px 40px 220px 25px/25px 220px 40px 190px;
+  --skew-x: 0.34deg;
+  --skew-y: 0.53deg;
+}
+
+fieldset:nth-of-type(4n + 4) {
+  --border-radius: 212px 32px 182px 47px/47px 182px 32px 212px;
+  --skew-x: -0.37deg;
+  --skew-y: -0.42deg;
+}
+
+.name,
+.category {
+  font-size: 1.1rem;
+}
+
+.preferences fieldset {
+  margin-bottom: 1.5rem;
+}
+
+.preferences footer {
+  display: block;
+  text-align: right;
+}
+
+.none-selected {
+  font-family: var(--secondary-font);
+  margin: 1rem;
+}
+
+.reset-button {
+  float: right;
+  margin-right: 1.5rem;
+}
+
+header {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.copyleft {
+  display: inline-block;
+  transform: rotateY(180deg);
+}
+
+/* Media query for responsive sidebar design */
+@media (width >= 1000px) {
+  /* Container of main content area and sidebar */
+  main {
+    /* Use flexbox for layout */
+    display: flex;
+
+    /* Align items at the top of the container (do not stretch) */
+    align-items: flex-start;
+  }
+
+  /* Main content area */
+  .options {
+    /* Allow the main content area to grow and fill available space */
+    flex: 1;
+  }
+
+  /* Sidebar */
+  .preferences {
+    /* Set a fixed width for the sidebar */
+    width: 30%;
+
+    /* Make the sidebar stick to the viewport while scrolling */
+    position: sticky;
+
+    /* Stick the sidebar to the top of the viewport */
+    top: 0;
+
+    /* Match body margin for uniform spacing */
+    margin-left: var(--gap);
+  }
+}
+
+.not-found {
+  margin-bottom: 2.5rem;
+}
+
+.not-found p {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+}
+
+.not-found p a {
+  font-weight: bold;
+  font-size: 1.3rem;
+}

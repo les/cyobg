@@ -1,0 +1,255 @@
+Social Dynamic:
+  - Asymmetric: Players have different abilities, roles, or win conditions.
+  - Bluffing: Players deceive, lie and mislead each other.
+  - Competitive: Players compete directly against each other.
+  - Cooperative: Players work together towards a common goal.
+  - Hidden Traitor: One or more players secretly work against the group.
+  - Multiplayer Solitaire: Players play individually with minimal interaction.
+  - Negotiation: Players must interact, negotiate, or communicate to succeed.
+  - Player Elimination: Players are eliminated from the game when certain conditions are met.
+  - Semi-Cooperative: Players cooperate but also have individual objectives.
+  - Single Loser: One player loses while all other players win.
+  - Social Deduction: Players deceive and betray each other.
+  - Storytelling & Improvisation: Players create or follow a story-based narrative.
+  - Take That: Players can hinder or attack each other directly.
+  - Team: Players are divided into teams that compete against each other.
+  - Temporary Alliances: Players can form temporary alliances with each other.
+
+Type:
+  - Abstract Strategy Game: Games with no theme, minimal luck, and perfect information.
+  - Adventure Game: Games with a strong narrative and exploration elements.
+  - Ameritrash Game: Games emphasizing theme, player conflict, and luck.
+  - Campaign Game: Games played over multiple sessions with a continuing story.
+  - Card Game: Games primarily using cards as the main component.
+  - Collectable Card Game (CCG) / Trading Card Game (TCG): Games where players collect and trade cards.
+  - Dungeon Crawl Game: Games where players explore dungeons, fighting monsters and collecting loot.
+  - Economic Game: Games focusing on resource management and economic systems.
+  - Educational Game: Games designed to teach or inform players.
+  - Engine Building Game: Games where players build and optimize a system or engine to generate resources or points.
+  - Escape Room Game: Games that simulate the experience of an escape room, often involving puzzles and clues.
+  - Eurogame: Games emphasizing strategy, resource management, and minimal luck.
+  - Exploration Game: Games where players explore unknown areas.
+  - Finale Ending Game: Games with a climactic ending.
+  - Legacy Game: Games that change and evolve over multiple plays, often with permanent changes.
+  - Living Card Game (LCG): Similar to CCGs but with fixed expansions.
+  - Miniatures Game: Games using miniature figures for gameplay.
+  - Party Game: Games designed for large groups and social interaction.
+  - Point Salad Game: Games where players can score points in many different ways.
+  - Print & Play Game: Games that can be printed and assembled by players.
+  - Race Game: Games where players compete to reach a goal first.
+  - Relaxing Game: Games designed to be calming and stress-free.
+  - Scenario-Based Game: Games with specific scenarios or missions to complete.
+  - Simulation Game: Games simulating real-world activities or systems.
+  - Stock Market Game: Games simulating stock trading and investment.
+  - Strategic Game: Games requiring long-term planning and strategy.
+  - Tactical Game: Games focusing on short-term decisions and tactics.
+  - Thematic Game: Games with a strong theme and narrative.
+  - Train Game: Games involving trains and railroads.
+  - Trivia Game: Games based on answering questions correctly.
+  - Tug of War Game: Games where players compete to control a central resource.
+  - War Game: Games simulating military conflict.
+  - Word Game: Games involving word creation or manipulation.
+
+Central Mechanism:
+  - Action Points: Players have a limited number of points to spend on actions each turn.
+  - Action Programming: Players plan their actions in advance and execute them in sequence.
+  - Action Selection: Players choose from a set of actions to perform on their turn.
+  - Alignment / Positional: Players maneuver and position pieces on the board to achieve objectives.
+  - Area Control / Area Majority: Players compete to control areas or territories on the board.
+  - Area Enclosure: Players enclose areas on the board to gain control or resources.
+  - Asymmetric Player Powers: Players have unique abilities or powers that differentiate them from each other.
+  - Auction / Bidding: Players bid to gain resources, actions, or advantages.
+  - Bag Building / Pool Building: Players draw from a bag or pool to build their resources or abilities.
+  - Stocks & Shares: Players buy and sell stocks to gain wealth.
+  - Betting / Wagering: Players place bets or wagers resources on uncertain outcomes.
+  - Bingo: Players mark off items or perform actions as they are called out.
+  - Bluffing: Players deliberately lie, deceive and mislead each other.
+  - Chit-Pulling: Players draw chits from a bag to determine actions or events.
+  - Commodity Speculation: Players buy and sell commodities, aiming to profit from market fluctuations.
+  - Trading: Players exchange resources or items with each other.
+  - Contract Fulfilment: Players complete specific tasks or objectives to gain rewards.
+  - Deck Building / Deck Construction: Players build and customize their own deck of cards during the game.
+  - Deduction / Induction: Players use logic and reasoning to deduce hidden information.
+  - Dexterity / Flicking: Players use physical skill and coordination to perform actions.
+  - Dice Building: Players build a pool of dice to roll for actions or resources.
+  - Dice Placement: Players place dice as workers, with the value of the dice affecting the action taken.
+  - Dice Rolling: Players roll dice to determine outcomes or actions.
+  - Drafting: Players select cards or items from a common pool in turn.
+  - Drawing: Players draw pictures or symbols to achieve objectives.
+  - Grid Coverage: Players cover grid spaces to achieve objectives.
+  - Grid Movement: Players move pieces on a grid or board to achieve objectives.
+  - Hand Management: Players manage and optimize their hand of cards or resources.
+  - Hidden Information: Some information is hidden from players, creating uncertainty and strategic depth.
+  - Hidden Movement: One or more players move secretly on the board to achieve objectives.
+  - Hidden Traitor: One or more players secretly work against the group.
+  - Hot Potato: Players pass an item around, trying to avoid being caught with it.
+  - I Split, You Choose: One player divides resources, and the other players choose their portions.
+  - Limited Communication: Players have restricted ways to communicate with each other.
+  - Mancala / Count & Capture: Players distribute pieces around a board to achieve objectives.
+  - Map Addition: Players add to a map to expand the game area.
+  - Memory / Matching: Players remember information or match items to achieve objectives.
+  - Miming / Acting: Players use gestures and actions to convey information.
+  - Multi-Use Cards: Cards can be used in multiple ways, such as for actions, resources, or points.
+  - Narrative Choice: Players make choices that affect the story or outcome of the game.
+  - Negotiation: Players make deals, alliances, or bribes to achieve objectives.
+  - Network & Route Building: Players build networks or routes to connect locations or achieve objectives.
+  - Pattern Building: Players create patterns with pieces or cards to achieve objectives.
+  - Turn Order Claiming: Players bid or claim turn order positions to gain advantages.
+  - Pattern Recognition: Players recognize patterns or sequences to achieve objectives.
+  - Perfect Information: Games where all information is available to all players.
+  - Pick-up & Deliver: Players pick up items and deliver them to specific locations.
+  - Player Elimination: Players are eliminated from the game when certain conditions are met.
+  - Player Judge: Players take turns judging the actions or creations of other players.
+  - Push Your Luck: Players take risks to gain rewards, with the possibility of losing everything.
+  - Puzzle / Maze: Players solve puzzles to achieve objectives.
+  - Quiz / Questions & Answers: Players answer questions to gain points or advantages.
+  - Real-Time Play: Players make decisions and take actions in real-time.
+  - Resource Management: Players manage resources to achieve objectives.
+  - Rock-Paper-Scissors: Players use a rock-paper-scissors mechanic to resolve conflicts.
+  - Role Playing: Players assume the roles of their characters.
+  - Role Selection: Players choose roles that grant specific abilities or actions.
+  - Roll & Move: Players roll dice or spin a spinner to determine movement.
+  - Roll & Write: Players roll dice or flip a card and write results on a score sheet.
+  - Rondel: Players move around a circular track to select actions.
+  - Set Collection: Players collect sets of items or cards to achieve objectives.
+  - Hidden Roles / Secret Objectives: Players deduce each other's hidden roles or intentions.
+  - Spelling: Players spell words to achieve objectives.
+  - Stock Holding: Players buy and sell stocks to gain wealth.
+  - Storytelling: Players create or follow a narrative within the game.
+  - Tableau Building: Players build and manage a personal tableau of cards or items.
+  - Tech Trees / Tech Tracks: Players advance along technology tracks to gain new abilities or advantages.
+  - Tile Drafting: Players draft tiles from a common pool to place on the board.
+  - Tile Flipping: Players flip tiles to reveal information or change the game state.
+  - Tile Laying: Players place tiles to build areas, routes, or patterns.
+  - Tile Placement: Players place tiles to build areas, routes, or patterns.
+  - Trick-Taking: Players play cards to win tricks or rounds.
+  - Variable Player Powers: Players have unique abilities or powers that differentiate them from each other.
+  - Voting: Players vote to make decisions or determine outcomes.
+  - Worker Placement: Players place workers to take actions or gain resources.
+
+Theme:
+  - Abstract (No Theme)
+  - Adventure
+  - Ancient
+  - Anthropomorphic Animals
+  - Art
+  - Aviation
+  - Books
+  - Business / Commerce
+  - City Building
+  - Civilization
+  - Colonization
+  - Comic Books
+  - Crime
+  - Cute
+  - Cyberpunk
+  - Dystopian
+  - Economic
+  - Education
+  - Exploration
+  - Fairy Tales
+  - Fantasy
+  - Farming
+  - Fauna / Wildlife
+  - Fighting / Martial Arts
+  - Flora / Gardening
+  - Food / Cooking
+  - Gambling / Casinos
+  - Historical
+  - Horror
+  - Humour / Dark Humour
+  - Industry / Manufacturing
+  - Intellectual Property / Licensed
+  - Japanese
+  - Love / Romance
+  - Mature / Adult
+  - Medical
+  - Medieval
+  - Movies / TV / Radio
+  - Murder / Mystery
+  - Music
+  - My Best Life
+  - Mystery
+  - Mythology
+  - Nature / Environment
+  - Nautical
+  - Pets
+  - Pirates
+  - Political
+  - Prehistoric
+  - Psychology
+  - Puzzle
+  - Racing
+  - Religious
+  - Renaissance
+  - Science
+  - Sci-Fi
+  - Space
+  - Spies / Espionage
+  - Sports
+  - Steampunk
+  - Superheroes
+  - Survival
+  - Technology
+  - Theatre / Performing Arts
+  - Time Travel
+  - Transportation
+  - Travel
+  - Video Game
+  - Warfare
+  - Western / Cowboys
+  - Zombie
+  - Other # @EOL
+
+Components:
+  - App
+  - Cards
+  - Cube Tower
+  - Cubes
+  - Map
+  - Board
+  - Dice
+  - Sheeples (Farm animal meeples)
+  - Creeples (Monster meeples)
+  - Bleeples (Robot meeples)
+  - Meeples (Contraction of "my people")
+  - Miniatures
+  - Money
+  - Multi-Use Cards
+  - Pen/Pencil
+  - Spinners
+  - Standard Card Deck
+  - Tiles
+  - Timer
+  - Tracks
+  - Other # EOL
+
+Complexity:
+  - Children's Game: Simple rules and mechanics, designed to be easily understood and enjoyed by young children.
+  - Casual / Party Game: Easy to learn and play, ideal for social gatherings and casual play sessions.
+  - Gateway Game (Light): Slightly more complex, yet still accessible to a wide audience, including families and new gamers.
+  - Family+ Game (Medium): More complexity, suitable for families with older children or those seeking a moderate challenge.
+  - Gamer's Game (Heavy): High complexity, designed for experienced gamers who enjoy deep and strategic gameplay.
+
+Duration:
+  - Short (15–30 minutes): Games that can be played in a short amount of time, often referred to as "fillers".
+  - Medium (60-90 minutes): Games that typically take an hour or more to play.
+  - Long (2–4 hours): Games that require a significant time investment, often spanning multiple hours.
+  - Epic (5+ hours): Games that are lengthy and may take an entire day or evening to complete.
+
+Entropy:
+  - None: Games with no randomness or luck, where outcomes are determined solely by player decisions.
+  - Low: Games with minimal randomness or luck, where player decisions have a significant impact on the outcome.
+  - Medium: Games with a moderate amount of randomness or luck, balancing strategy and chance.
+  - High: Games with a high degree of randomness or luck, where outcomes are influenced by dice rolls, card draws, or other unpredictable elements.
+
+Player Count:
+  - 1 (Solo)
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+  - 9+

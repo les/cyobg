@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-security-policy"
+    content="default-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self';">
+
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="author" content="<%= author %>">
+  <meta name="keywords" content="<%= keywords %>">
+
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1><a href="./"><%= title %></a></h1>
+  </header>
+
+  <main>
+    <section id="options" class="options">
+      <header>
+        <h2><a href="#options">Options</a></h2>
+      </header>
+
+      <%
+        function slugify (text) {
+          return text.toString().toLowerCase()
+            .replace(/\s+/g, '-') // Replace all spaces with hyphens
+            .replace(/[^\w-]+/g, '') // Remove all non-word characters except hyphens
+            .replace(/--+/g, '-') // Replace multiple consecutive hyphens with a single hyphen
+            .replace(/^-+/, '') // Remove any leading hyphens
+            .replace(/-+$/, '') // Remove any trailing hyphens
+        }
+      %>
+
+      <% Object.keys(data).forEach(category => { %>
+        <fieldset>
+          <legend id="<%= slugify(category) %>"><a href="#<%= slugify(category) %>"><%= category %></a></legend>
+          <ul>
+            <% data[category].forEach(option => { %>
+              <li>
+                <% const name = typeof option === 'object' ? Object.keys(option)[0] : option %>
+                <% const desc = typeof option === 'object' ? option[name] : '' %>
+                <div class="option">
+                  <input type="checkbox" id="<%= slugify(category) %>-<%= slugify(name) %>"
+                    name="<%= slugify(category) %>" value="<%= name %>" data-category="<%= category %>">
+                  <label for="<%= slugify(category) %>-<%= slugify(name) %>">
+                    <span class="name"><%= name %><% if (desc) { %>:<% } %></span>
+                    <% if (desc) { %>
+                      <span class="description"><%= desc %></span>
+                    <% } %>
+                  </label>
+                </div>
+              </li>
+            <% }) %>
+          </ul>
+        </fieldset>
+      <% }) %>
+    </section>
+
+    <section id="preferences" class="preferences">
+      <header>
+        <h2><a href="#preferences">Preferences</a></h2>
+      </header>
+
+      <fieldset>
+        <legend id="selected-options"><a href="#selected-options">Selected Options</a></legend>
+        <div id="selected-options-here" aria-live="polite"></div>
+      </fieldset>
+
+      <footer>
+        <a href="https://boardgamegeek.com/advsearch/boardgame" target="_blank">Search BoardGameGeek</a>
+      </footer>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>
+      <small>
+        Copyleft <span class="copyleft">&copy;</span> <%= new Date().getFullYear() %>
+        <a href="<%= author.url %>"><%= author.name %></a>. All rights reserved.
+      </small>
+    </p>
+  </footer>
+
+  <script defer src="index.mjs"></script>
+</body>
+
+</html>

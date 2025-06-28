@@ -1,0 +1,46 @@
+{
+  "name": "cyobg",
+  "version": "1.0.0",
+  "description": "CYOBG (Choose Your Own Board Game) helps me match people with board games based on their preferences.",
+  "keywords": [
+    "BGG",
+    "BoardGameGeek",
+    "board game diversity",
+    "board game hobby",
+    "board game recommendations",
+    "board games",
+    "board game selection",
+    "board game showcase",
+    "Choose Your Own Adventure",
+    "CYOA",
+    "non-gamer friends"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "les",
+    "url": "https://github.com/les"
+  },
+  "homepage": "https://les.github.io/cyobg/",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=23"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.mjs",
+    "serve": "webpack serve --config webpack.dev.mjs --open",
+    "stats": "webpack --config webpack.prod.mjs --profile --json=compilation-stats.json",
+    "test": "echo \"YOLO, yeehaw! 🤠\""
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "favicons": "^7.2.0",
+    "html-bundler-webpack-plugin": "^4.10.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1",
+    "yaml": "^2.6.1"
+  }
+}
